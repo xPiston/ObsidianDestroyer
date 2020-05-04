@@ -216,7 +216,7 @@ public class ConfigManager {
                 final ConfigurationSection materialSection = section.getConfigurationSection(durabilityMaterial);
                 Material material = Material.matchMaterial(durabilityMaterial);
                 if (material == null) {
-                    material = Material.matchMaterial(durabilityMaterial, true);
+                    material = Material.matchMaterial(durabilityMaterial);
                     if (material == null) {
                         if (DurabilityMaterial.isEnabled(materialSection)) {
                             ObsidianDestroyer.LOG.log(Level.WARNING, "Invalid Material Type: Unable to load ''{0}''", durabilityMaterial);
